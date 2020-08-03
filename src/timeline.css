@@ -6,17 +6,38 @@
     box-sizing: border-box;
     border-right: 1px solid grey;
     overflow: hidden;
-    padding: 20px 0;
+    padding: 10% 0;
 }
 
 
 
-.timeline-filter {
-    position: absolute;
+.timeline__filter {
+    position: relative;
     height: 100%;
-    width: 100px;
-    z-index: 100;
-    background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 80%, rgb(255, 255, 255) 90%);
+
+}
+
+.timeline__filter::before,
+.timeline__filter::after {
+    position: absolute;
+    content: "";
+    height: 10%;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+
+.timeline__filter::before {
+    top: 0;
+    background: linear-gradient(rgb(255, 255, 255) 10%, rgba(0,0,0,0) 100%);
+
+
+}
+.timeline__filter::after {
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0,0) 0%, rgb(255, 255, 255) 90%);
+
 }
 
 

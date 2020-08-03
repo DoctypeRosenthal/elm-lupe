@@ -165,7 +165,7 @@ view model =
         [ class "App"
         , Pointer.onOut (always Nothing >> SetActiveTick)
         ]
-        [ timelineView model.activeTick
+        [ div [ class "timeline__filter" ] [ timelineView model.activeTick ]
         ]
 
 
